@@ -70,7 +70,11 @@ $$\tan{a_2} = \dfrac{r_A + r_B}{d}$$
 
 $$\tan{a_3} = \dfrac{r_A + r_B - d_2 \tan{a_1}}{d + d_2}$$
 
-If $d_2$ is longer than $d_3 = \dfrac{r_B}{\tan{a_1}}$, we are in the antumbra case, which is weird.
+The attached code produces the following figure:
+![Figure_2](https://github.com/user-attachments/assets/4cb6fca8-be97-41d8-ae18-7aa36bea8c36)
+
+
+If $d_2$ is longer than $d_3 = r_B/\tan{a_1}$, we are in the antumbra case, which is weird.
 
 Once we have the coordinates of the intercepts between the rimlines and the screen $C$, we can transform these into a local coordinate system like a planetrary latitude/longitude system.
 

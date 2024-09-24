@@ -213,3 +213,17 @@ for x in range(intersct_pos.shape[0]):
 # about 100 km, i.e., about 1 deg in latitude
 for gp in g[intersct_cat == 2]:
     print(gp.latitude.degrees, gp.longitude.degrees)
+
+# plot on map
+import cartopy.crs as ccrs
+fig, ax = plt.subplots(dpi=150)
+ax.axis("off")
+ax = plt.axes(projection=ccrs.PlateCarree())
+for gp in g[intersct_cat == 2]:
+    ax.scatter(gp.longitude.degrees, gp.latitude.degrees, c="k", s=0.3,
+               transform=ccrs.Geodetic())
+for gp in g[intersct_cat == 1]:
+    ax.scatter(gp.longitude.degrees, gp.latitude.degrees, c="tab:gray", s=0.3,
+               transform=ccrs.Geodetic())
+ax.coastlines()
+ax.set_extent([-150,-30,-10,50])

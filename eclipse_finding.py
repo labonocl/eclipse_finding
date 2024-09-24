@@ -182,11 +182,11 @@ plt.axis("equal")
 plt.legend()
 
 # convert to geocentric latitude/longitude
-from skyfield.positionlib import Geocentric
+from skyfield.positionlib import ICRF
 from skyfield.api import wgs84
 
 # geocentric ECEF position of centerline intersection
-cposition = Geocentric(
+cposition = ICRF(
     intersct_cpos - screen_position.position.km, 
     velocity_au_per_d=[0,0,0], 
     t=t0, 
@@ -201,7 +201,7 @@ print(cp.latitude.degrees, cp.longitude.degrees)
 g = np.empty_like(intersct_cat, dtype=object)
 for x in range(intersct_pos.shape[0]):
     for y in range(intersct_pos.shape[1]):
-        position = Geocentric(
+        position = ICRF(
             intersct_pos[x,y,:] - screen_position.position.km, 
             velocity_au_per_d=[0,0,0], 
             t=t0, 

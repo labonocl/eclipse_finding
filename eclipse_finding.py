@@ -67,10 +67,6 @@ def find_eclipse(eclipsee_position, eclipsee_R,
     a1 = np.arctan2(eclipsee_R - eclipser_R, d)
     # maximum angle of ray that is boundary/edge for penumbra
     a2 = np.arctan2(eclipsee_R + eclipser_R, d)
-    # maximum angle of ray that is boundary/edge for umbra
-    a3 = np.arctan2(eclipsee_R + eclipser_R - d2*np.tan(a1), d + d2)
-    # shadow region radius
-    shadow_R = eclipser_R - d2*np.tan(a1)
     # vector from eclipsee center to eclipser center
     along_dir = eclipser_position_km - eclipsee_position_km
     # normalize
@@ -128,10 +124,10 @@ def find_eclipse(eclipsee_position, eclipsee_R,
                 # check for antumbra
                 if a1 > 0 and eclipser_R/np.tan(a1) < d2:
                     intersct_cat[x,y] = 3
-                elif intersct_ang[x,y] >= (1-eps)*a1 and intersct_ang[x,y] < a3:
+                elif np.abs(intersct_ang[x,y] - a1) < eps:
                     # umbra
                     intersct_cat[x,y] = 2
-                elif intersct_ang[x,y] >= a3 and intersct_ang[x,y] <= (1+eps)*a2:
+                elif intersct_ang[x,y] <= (1 + eps)*a2:
                     # penumbra
                     intersct_cat[x,y] = 1
                 else:

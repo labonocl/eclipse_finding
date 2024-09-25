@@ -122,12 +122,14 @@ def find_eclipse(eclipsee_position, eclipsee_R,
                 # find category of intercept, umbra or penumbra
                 intersct_ang[x,y] = angle_between(u,along_dir)
                 # check for antumbra
-                if a1 > 0 and eclipser_R/np.tan(a1) < d2:
-                    intersct_cat[x,y] = 3
-                elif np.abs(intersct_ang[x,y] - a1) < eps:
-                    # umbra
-                    intersct_cat[x,y] = 2
-                elif intersct_ang[x,y] <= (1 + eps)*a2:
+                if a1 > 0 and d2 > eclipser_R/np.tan(a1):
+                    whichumbra = 3
+                else:
+                    whichumbra = 2
+                if np.abs(intersct_ang[x,y] - a1) < eps:
+                    # (ant)umbra
+                    intersct_cat[x,y] = whichumbra
+                elif intersct_ang[x,y] <= (1+eps)*a2:
                     # penumbra
                     intersct_cat[x,y] = 1
                 else:
@@ -166,9 +168,9 @@ intersct_cpos, intersct_pos, intersct_cat = find_eclipse(
 # plot result in ICRF
 import matplotlib.pyplot as plt
 fig, ax = plt.subplots(figsize=(7,7),dpi=150)
-labels = ["penumbra", "umbra"]
-colors = ["tab:gray", "k"]
-for i in [1,2]:
+labels = ["penumbra", "umbra", "antumbra"]
+colors = ["tab:gray", "k", "k"]
+for i in [1,2,3]:
     idx = intersct_cat == i
     ax.scatter(intersct_pos[idx,0], intersct_pos[idx,1], 
                c=colors[i-1], label=labels[i-1])

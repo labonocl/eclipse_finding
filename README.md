@@ -51,31 +51,28 @@ $$\vec{l}(s) = \vec{a} + R_A \vec{r} + s \left (\vec{b} + R_B\vec{r} - \vec{a} -
 where $R_A$ and $R_B$ are matrices facilitating the scaling of $\vec{r}$, and its rotation around $\vec{d}$. Assuming that the length of the radius vector is $r^\prime$ and the body's radius is $r$, the rotation matrix is given by [^1]
 
 $$R(\vec{d}, \theta) = \begin{pmatrix}
-		k u_x^2 (1 - \cos{\theta}) + \cos{\theta} & u_x u_y (1 - \cos{\theta}) - u_z \sin{\theta} & u_x u_z (1 - \cos{\theta}) + u_y \sin{\theta} \\
-		(u_x u_y (1 - \cos{\theta}) + u_z \sin{\theta} & k u_y^2 (1 - \cos{\theta}) + \cos{\theta} & u_y u_z (1 - \cos{\theta}) - u_x \sin{\theta} \\
-		(u_x u_z (1 - \cos{\theta}) - u_y \sin{\theta} & u_y u_z (1 - \cos{\theta}) + u_x \sin{\theta} & k u_z^2 (1 - \cos{\theta}) + \cos{\theta})
+		k u_x^2 (1 - c) + c     & u_x u_y (1 - c) - u_z s & u_x u_z (1 - c) + u_y s \\
+		u_x u_y (1 - c) + u_z s & k u_y^2 (1 - c) + c     & u_y u_z (1 - c) - u_x s \\
+		u_x u_z (1 - c) - u_y s & u_y u_z (1 - c) + u_x s & k u_z^2 (1 - c) + c
 		\end{pmatrix},$$
 
-where $\theta$ is some (arbitrary) angle between 0 and 2 $\pi$ and $\vec{u} = \vec{d}/d$ and $k = r/r^\prime$. For each combination of $R_A$ and $R_B$ we calculate (if they exist) $s_{1,2}$, analogously to before. The angle $a$ between the rimlines and the centerline is
+where $\theta$ is some (arbitrary) angle between 0 and 2 $\pi$, $s = \sin{\theta}$, $c = \cos{\theta}$, $\vec{u} = \vec{d}/d$, and $k = r/r^\prime$. For each combination of $R_A$ and $R_B$ we calculate (if they exist) $s_{1,2}$, analogously to before. The angle $a$ between the rimlines and the centerline is
 
 $$\cos{a} = \dfrac{\left ( \vec{b} - \vec{a} \right ) \cdot \left ( \vec{b} + R_B\vec{r} - \vec{a} - R_A\vec{r} \right )}{\left | \vec{b} - \vec{a} \right | \left | \vec{b} + R_B\vec{r} - \vec{a} - R_A\vec{r} \right |}.$$
 
-![eclipse](https://github.com/user-attachments/assets/6375287b-f6d1-4530-9747-51a9722edd60)
-
-In the Figure above, different angles for the umbra, penumbra, and antumbra are shown. Here, angles are positive clockwise - in the second sketch, $a_1$ is therefore negative. When the angle $a$ between the rimline and the centerline is greater than $a_1$, but less than $a_3$, the ray falls into the umbra. If $a$ is greater than both $a_1$ and $a_3$, but smaller than $a_2$, it falls into the penumbra. The angles are defined as
+![eclipse](https://github.com/user-attachments/assets/121153d5-9be6-42ef-accd-2bba3d585376)
+In the Figure above, different angles for the umbra, penumbra, and antumbra are shown. Here, angles are positive clockwise - in the second sketch, $a_1$ is therefore negative. When the angle $a$ between the rimline and the centerline is equal to $a_1$, the ray falls onto the outer edge of the umbra. If $a$ is greater than $a_1$, but smaller than $a_2$, it falls into the penumbra. The angles are defined as
 
 $$\tan{a_1} = \dfrac{r_A - r_B}{d}$$
 
 $$\tan{a_2} = \dfrac{r_A + r_B}{d}$$
 
-$$\tan{a_3} = \dfrac{r_A + r_B - d_2 \tan{a_1}}{d + d_2}$$
-
-The attached code produces the following figure:
-![Figure_2](https://github.com/user-attachments/assets/4cb6fca8-be97-41d8-ae18-7aa36bea8c36)
-
+The attached code produces the following figures:
+![Figure_1](https://github.com/user-attachments/assets/bcefa4fd-abb3-4ef4-9c4a-9ac97b4a8eed)
 
 If $d_2$ is longer than $d_3 = r_B/\tan{a_1}$, we are in the antumbra case, which is weird.
 
 Once we have the coordinates of the intercepts between the rimlines and the screen $C$, we can transform these into a local coordinate system like a planetrary latitude/longitude system.
+![Figure_2](https://github.com/user-attachments/assets/8f02814a-ea4c-42d7-bd55-7af977f730d4)
 
 [^1]: Rotation matrix on Wikipedia(https://en.wikipedia.org/wiki/Rotation_matrix#Rotation_matrix_from_axis_and_angle)

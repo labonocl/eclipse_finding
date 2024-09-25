@@ -60,8 +60,15 @@ where $\theta$ is some (arbitrary) angle between 0 and 2 $\pi$, $s = \sin{\theta
 
 $$\cos{a} = \dfrac{\left ( \vec{b} - \vec{a} \right ) \cdot \left ( \vec{b} + R_B\vec{r} - \vec{a} - R_A\vec{r} \right )}{\left | \vec{b} - \vec{a} \right | \left | \vec{b} + R_B\vec{r} - \vec{a} - R_A\vec{r} \right |}.$$
 
-![eclipse](https://github.com/user-attachments/assets/121153d5-9be6-42ef-accd-2bba3d585376)
-In the Figure above, different angles for the umbra, penumbra, and antumbra are shown. Here, angles are positive clockwise - in the second sketch, $a_1$ is therefore negative. When the angle $a$ between the rimline and the centerline is equal to $a_1$, the ray falls onto the outer edge of the umbra. If $a$ is greater than $a_1$, but smaller than $a_2$, it falls into the penumbra. The angles are defined as
+![eclipse](https://github.com/user-attachments/assets/6416b118-0bdf-4db3-9ec2-29f07f510bcf)
+![eclipse_antumbra](https://github.com/user-attachments/assets/a5daf20b-4607-4ddf-a9b1-b857b1fc6864)
+
+In the Figures above, different angles for the umbra, penumbra, and antumbra are shown. Here, angles are positive clockwise - in the second sketch of top Figure, $a_1$ is therefore negative. Generally, we can distinguish two cases:
+
++ Case 1: The distance between the eclipser and screen $d_2$ is smaller than $r_B/\tan{a_1}$, in which case the eclipsee is totally covered by the eclipser and an umbra is formed; or
++ Case 2: the distance between the eclipser and screen $d_2$ is larger than  $r_B/\tan{a_1}$, in which case the eclipsee is only partially covered by the eclipser and an antumbra is formed.
+
+The determination of the different regions is actually the same for both cases: when the angle $a$ between the rimline and the centerline is equal to $a_1$, the ray falls onto the outer edge of the (ant)umbra. If $a$ is greater than $a_1$, but smaller than $a_2$, it falls into the penumbra. The angles are defined as
 
 $$\tan{a_1} = \dfrac{r_A - r_B}{d}$$
 

@@ -92,7 +92,7 @@ def find_eclipse(eclipsee_position, eclipsee_R,
     intersct_ang = np.zeros((eclipsee_rim.shape[0], eclipser_rim.shape[0]))
     intersct_cat = np.zeros((eclipsee_rim.shape[0], eclipser_rim.shape[0]))
     # fudge factor
-    eps = 1e-6
+    eps = 1e-10
     for x,eclipsee_pt in enumerate(eclipsee_rim):
         for y,eclipser_pt in enumerate(eclipser_rim):
             # https://en.wikipedia.org/wiki/Line%E2%80%93sphere_intersection#Calculation_using_vectors_in_3D

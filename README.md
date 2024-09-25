@@ -61,7 +61,8 @@ where $\theta$ is some (arbitrary) angle between 0 and 2 $\pi$, $s = \sin{\theta
 $$\cos{a} = \dfrac{\left ( \vec{b} - \vec{a} \right ) \cdot \left ( \vec{b} + R_B\vec{r} - \vec{a} - R_A\vec{r} \right )}{\left | \vec{b} - \vec{a} \right | \left | \vec{b} + R_B\vec{r} - \vec{a} - R_A\vec{r} \right |}.$$
 
 ![eclipse](https://github.com/user-attachments/assets/6416b118-0bdf-4db3-9ec2-29f07f510bcf)
-![eclipse_antumbra](https://github.com/user-attachments/assets/a5daf20b-4607-4ddf-a9b1-b857b1fc6864)
+![eclipse_antumbra](https://github.com/user-attachments/assets/467e486b-8ab9-4561-8630-91b2fcad7a14)
+
 
 In the Figures above, different angles for the umbra, penumbra, and antumbra are shown. Here, angles are positive clockwise - in the second sketch of top Figure, $a_1$ is therefore negative. Generally, we can distinguish two cases:
 

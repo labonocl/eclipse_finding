@@ -68,11 +68,12 @@ $$\tan{a_1} = \dfrac{r_A - r_B}{d}$$
 $$\tan{a_2} = \dfrac{r_A + r_B}{d}$$
 
 The attached code produces the following figures:
-![Figure_1](https://github.com/user-attachments/assets/bcefa4fd-abb3-4ef4-9c4a-9ac97b4a8eed)
+![Figure_1](https://github.com/user-attachments/assets/7ccd3c9a-2b7b-43b0-8221-dd609156d232)
+
 
 If $d_2$ is longer than $d_3 = r_B/\tan{a_1}$, we are in the antumbra case, which is weird.
 
 Once we have the coordinates of the intercepts between the rimlines and the screen $C$, we can transform these into a local coordinate system like a planetrary latitude/longitude system.
-![Figure_2](https://github.com/user-attachments/assets/8f02814a-ea4c-42d7-bd55-7af977f730d4)
+![Figure_2](https://github.com/user-attachments/assets/5cd90a8e-9bfe-4e2a-95d7-c7be5a8451b7)
 
 [^1]: Rotation matrix on Wikipedia(https://en.wikipedia.org/wiki/Rotation_matrix#Rotation_matrix_from_axis_and_angle)

@@ -4,7 +4,8 @@ This project aims to provide general purpose code to find eclipses using Skyfiel
 # Background
 
 Eclipses involve three bodies, the eclipsee (A), the eclipser (B), and the screen (C). The light from the eclipsee is (partially) blocked by the eclipser before it reaches the screen. In case of a solar eclipse, the Sun is the eclipsee, the Moon is the eclipser, and the Earth is the screen onto which the shadow of the Moon falls. During a lunar eclipse the light from the Sun (eclipsee) is blocked by the Earth (eclipser) before it falls on the Moon (screen). Lastly, the eclipse is observed from somewhere (observer) - this is usually the Earth (both in case of the solar and lunar eclipse) but could potentially by a satellite, or any other body.
-![coordinate_system](https://github.com/user-attachments/assets/76f8e22f-5745-4059-be8f-5a0602e98e6d)
+![coordinate_system](https://github.com/user-attachments/assets/91ee455c-ef2f-4e31-a89f-1f76b8de4084)
+
 
 Typically, the eclipsee is a star, such that the shadow of the eclipser falls onto the screen. There are three types of shadow: the umbra, the penumbra, and the antumbra. Within the umbra the eclipser completely covers the light source (eclipsee). The antumbra extends beyond the tip of the umbra, within which the eclipser is completely in front of the light source (eclipsee) but too small to completely cover it. The penumbra describes the part of the shadow within which the eclipser is only partially in front of the light source (eclipsee).
 
@@ -60,9 +61,8 @@ where $\theta$ is some (arbitrary) angle between 0 and 2 $\pi$, $s = \sin{\theta
 
 $$\cos{a} = \dfrac{\left ( \vec{b} - \vec{a} \right ) \cdot \left ( \vec{b} + R_B\vec{r} - \vec{a} - R_A\vec{r} \right )}{\left | \vec{b} - \vec{a} \right | \left | \vec{b} + R_B\vec{r} - \vec{a} - R_A\vec{r} \right |}.$$
 
-![eclipse](https://github.com/user-attachments/assets/6416b118-0bdf-4db3-9ec2-29f07f510bcf)
-![eclipse_antumbra](https://github.com/user-attachments/assets/467e486b-8ab9-4561-8630-91b2fcad7a14)
-
+![eclipse](https://github.com/user-attachments/assets/63c435da-1eb5-4144-9157-879b9a5f1eb3)
+![eclipse_antumbra](https://github.com/user-attachments/assets/d93fdac8-9866-48eb-9de3-9a7899e4e02e)
 
 In the Figures above, different angles for the umbra, penumbra, and antumbra are shown. Here, angles are positive clockwise - in the second sketch of top Figure, $a_1$ is therefore negative. Generally, we can distinguish two cases:
 
